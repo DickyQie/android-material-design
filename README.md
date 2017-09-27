@@ -123,52 +123,54 @@ xmlns:android="http://schemas.android.com/apk/res/android"
 </p>
 <p>效果图布局</p>
 <p></p>
-<pre name="code" class="html">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
-&lt;android.support.design.widget.CoordinatorLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
-    xmlns:app=&quot;http://schemas.android.com/apk/res-auto&quot;
-    android:layout_width=&quot;match_parent&quot;
-    android:layout_height=&quot;match_parent&quot;
-    android:orientation=&quot;vertical&quot;&gt;
+<pre name="code" class="html">
+ <?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    &lt;android.support.design.widget.AppBarLayout
-        android:layout_width=&quot;match_parent&quot;
-        android:layout_height=&quot;wrap_content&quot;
-        android:theme=&quot;@style/ThemeOverlay.AppCompat.Dark.ActionBar&quot;&gt;
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
-        &lt;!--app:layout_scrollFlags
+        <!--app:layout_scrollFlags
         1、scroll: 所有想滚动出屏幕的view都需要设置这个flag，
         没有设置这个flag的view将被固定在屏幕顶部。
         例如，TabLayout 没有设置这个值，将会停留在屏幕顶部。
         2、enterAlways: 设置这个flag时，向下的滚动都会导致该view变为可见，启用快速“返回模式”。
         3、enterAlwaysCollapsed: 当你的视图已经设置minHeight属性又使用此标志时，
         你的视图只能已最小高度进入，只有当滚动视图到达顶部时才扩大到完整高度。
-        4、exitUntilCollapsed: 滚动退出屏幕，最后折叠在顶端。--&gt;
+        4、exitUntilCollapsed: 滚动退出屏幕，最后折叠在顶端。-->
 
-        &lt;android.support.v7.widget.Toolbar
-            android:id=&quot;@+id/appbar_toolbar&quot;
-            app:layout_scrollFlags=&quot;scroll|enterAlways&quot;
-            app:popupTheme=&quot;@style/Theme.AppCompat.Light&quot;
-            android:layout_width=&quot;match_parent&quot;
-            android:layout_height=&quot;?attr/actionBarSize&quot;
-            android:background=&quot;?attr/colorPrimary&quot; /&gt;
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/appbar_toolbar"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:popupTheme="@style/Theme.AppCompat.Light"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary" />
 
-        &lt;android.support.design.widget.TabLayout
-            android:id=&quot;@+id/tabs&quot;
-            app:tabGravity=&quot;fill&quot;
-            app:tabMode=&quot;fixed&quot;
-            android:layout_width=&quot;match_parent&quot;
-            android:layout_height=&quot;wrap_content&quot; /&gt;
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tabs"
+            app:tabGravity="fill"
+            app:tabMode="fixed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
-    &lt;/android.support.design.widget.AppBarLayout&gt;
-    &lt;android.support.v4.view.ViewPager
-        android:id=&quot;@+id/viewpager&quot;
-        android:layout_width=&quot;match_parent&quot;
-        android:layout_height=&quot;match_parent&quot;
-        app:layout_behavior=&quot;@string/appbar_scrolling_view_behavior&quot; /&gt;
-    &lt;!--三：滑动组件的动画，满一屏才有效果。
+    </android.support.design.widget.AppBarLayout>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+    <!--三：滑动组件的动画，满一屏才有效果。
     app:layout_behavior=”@string/appbar_scrolling_view_behavior”
-    --&gt;
+    -->
 
-&lt;/android.support.design.widget.CoordinatorLayout&gt;</pre><br>
+</android.support.design.widget.CoordinatorLayout>
+</pre><br>
 <br>
 <p></p>
