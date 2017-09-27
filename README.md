@@ -1,4 +1,4 @@
-## Android----Material Design之（FloatActionButton，CoordinatorLayout，CollapsingToolbarLayout，AppBarLayout 
+### Android----Material Design之（FloatActionButton，CoordinatorLayout，CollapsingToolbarLayout，AppBarLayout 
 
  <p>Material Design 的一些UI 平常开发还是用的比较多的，以前没写，最近总结一下，写一篇博客，要求版本在5.0以上。</p> 
 <p>主要介绍了FloatActionButton，CoordinatorLayout，CollapsingToolbarLayout，AppBarLayout，Toolbar，TabLayout，RecyclerView，CardView</p> 
@@ -123,8 +123,7 @@ xmlns:android="http://schemas.android.com/apk/res/android"
 </p>
 <p>效果图布局</p>
 <p></p>
-<pre name="code" class="html">
- <?xml version="1.0" encoding="utf-8"?>
+<pre name="code" class="html"><?xml version="1.0" encoding="utf-8"?>
 <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
@@ -169,7 +168,6 @@ xmlns:android="http://schemas.android.com/apk/res/android"
     <!--三：滑动组件的动画，满一屏才有效果。
     app:layout_behavior=”@string/appbar_scrolling_view_behavior”
     -->
-
 </android.support.design.widget.CoordinatorLayout>
 </pre><br>
 <br>
