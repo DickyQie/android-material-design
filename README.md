@@ -41,75 +41,78 @@
 <p><br>
 </p>
 <p>&nbsp;实现效果图的代码：</p>
-<pre name="code" class="html">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
-&lt;android.support.design.widget.CoordinatorLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
-    xmlns:app=&quot;http://schemas.android.com/apk/res-auto&quot;
-    android:id=&quot;@+id/main_content&quot;
-    android:layout_width=&quot;match_parent&quot;
-    android:layout_height=&quot;match_parent&quot;
-    android:fitsSystemWindows=&quot;true&quot;&gt;
+<pre name="code" class="html">
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout 
+xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
 
-    &lt;android.support.design.widget.AppBarLayout
-        android:id=&quot;@+id/appbar&quot;
-        android:layout_width=&quot;match_parent&quot;
-        android:layout_height=&quot;226dp&quot;
-        android:theme=&quot;@style/ThemeOverlay.AppCompat.Dark.ActionBar&quot;
-        android:fitsSystemWindows=&quot;true&quot;&gt;
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="226dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:fitsSystemWindows="true">
 
-        &lt;android.support.design.widget.CollapsingToolbarLayout
-            android:id=&quot;@+id/collapsing_toolbar&quot;
-            android:layout_width=&quot;match_parent&quot;
-            android:layout_height=&quot;match_parent&quot;
-            app:layout_scrollFlags=&quot;scroll|exitUntilCollapsed&quot;
-            android:fitsSystemWindows=&quot;true&quot;
-            app:contentScrim=&quot;?attr/colorPrimary&quot;
-            app:expandedTitleMarginStart=&quot;48dp&quot;
-            app:expandedTitleMarginEnd=&quot;64dp&quot;&gt;
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            android:fitsSystemWindows="true"
+            app:contentScrim="?attr/colorPrimary"
+            app:expandedTitleMarginStart="48dp"
+            app:expandedTitleMarginEnd="64dp">
 
-            &lt;ImageView
-                app:layout_scrollFlags=&quot;scroll|enterAlways|enterAlwaysCollapsed&quot;
-                android:id=&quot;@+id/backdrop&quot;
-                android:layout_width=&quot;match_parent&quot;
-                android:layout_height=&quot;match_parent&quot;
-                android:scaleType=&quot;centerCrop&quot;
-                android:fitsSystemWindows=&quot;true&quot;
-                android:src=&quot;@mipmap/zhangwo_hometop1&quot;
-                app:layout_collapseMode=&quot;parallax&quot;
-                /&gt;
-            &lt;android.support.v7.widget.Toolbar
-                android:id=&quot;@+id/toolbar&quot;
-                android:layout_width=&quot;match_parent&quot;
-                android:layout_height=&quot;?attr/actionBarSize&quot;
-                app:popupTheme=&quot;@style/ThemeOverlay.AppCompat.Light&quot;
-                app:layout_collapseMode=&quot;pin&quot; /&gt;
+            <ImageView
+                app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed"
+                android:id="@+id/backdrop"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:fitsSystemWindows="true"
+                android:src="@mipmap/zhangwo_hometop1"
+                app:layout_collapseMode="parallax"
+                />
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:layout_collapseMode="pin" />
 
-        &lt;/android.support.design.widget.CollapsingToolbarLayout&gt;
+        </android.support.design.widget.CollapsingToolbarLayout>
 
-    &lt;/android.support.design.widget.AppBarLayout&gt;
+    </android.support.design.widget.AppBarLayout>
 
-    &lt;android.support.v4.widget.NestedScrollView
-        android:layout_width=&quot;match_parent&quot;
-        android:layout_height=&quot;match_parent&quot;
-        app:layout_behavior=&quot;@string/appbar_scrolling_view_behavior&quot;&gt;
-        &lt;android.support.v7.widget.RecyclerView
-            android:id=&quot;@+id/recyclerView&quot;
-            android:layout_width=&quot;match_parent&quot;
-            android:layout_height=&quot;match_parent&quot;
-            android:scrollbars=&quot;none&quot; /&gt;
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none" />
 
-    &lt;/android.support.v4.widget.NestedScrollView&gt;
+    </android.support.v4.widget.NestedScrollView>
 
-    &lt;android.support.design.widget.FloatingActionButton
-        android:id=&quot;@+id/fab&quot;
-        android:layout_height=&quot;wrap_content&quot;
-        android:layout_width=&quot;wrap_content&quot;
-        app:layout_anchor=&quot;@id/appbar&quot;
-        app:layout_anchorGravity=&quot;bottom|right|end&quot;
-        android:src=&quot;@mipmap/ic_launcher&quot;
-        android:layout_margin=&quot;15dp&quot;
-        android:clickable=&quot;true&quot;/&gt;
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        app:layout_anchor="@id/appbar"
+        app:layout_anchorGravity="bottom|right|end"
+        android:src="@mipmap/ic_launcher"
+        android:layout_margin="15dp"
+        android:clickable="true"/>
 
-&lt;/android.support.design.widget.CoordinatorLayout&gt;</pre><br>
+</android.support.design.widget.CoordinatorLayout>
+</pre><br>
 <br>
 <p><span style="font-size:15px"><strong>3：CoordinatorLayout&#43;AppBarLayout&#43;TabLayout（工具栏伸缩折叠）</strong></span></p>
 <p><span style="font-size:15px">CoordinatorLayout是support.design包中的控件，它可以说是Design库中最重要的控件，</span></p>
